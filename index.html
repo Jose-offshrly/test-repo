@@ -3,23 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <title>User Registration</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      transition: border 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: #4a90e2;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 0.7rem;
+      background-color: #4a90e2;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #357ABD;
+    }
+  </style>
 </head>
 <body>
-  <h1>Register New User</h1>
-  <form action="/submit" method="post">
-    <label for="fullname">Full Name:</label><br>
-    <input type="text" id="fullname" name="fullname" required><br><br>
+  <div class="form-container">
+    <h1>Register</h1>
+    <form action="/submit" method="post">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
 
-    <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username" required><br><br>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
 
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password" required><br><br>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
 
-    <input type="submit" value="Register">
-  </form>
+      <input type="submit" value="Register">
+    </form>
+  </div>
 </body>
 </html>
